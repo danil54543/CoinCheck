@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoinCheck.WPF.Model
+namespace CoinCheck.Service.Implementation
 {
-    internal class Coin
+    internal class CurrencyService
     {
     }
 }

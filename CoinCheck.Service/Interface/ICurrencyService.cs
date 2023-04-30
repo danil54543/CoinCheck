@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoinCheck.WPF.Service.Interfaces
+namespace CoinCheck.Service.Interface
 {
     internal interface ICurrencyService
     {

@@ -7,7 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5E2C350B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{67C60B0A-6103-4BBB-BE6F-3AF7FF50752F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinCheck.WPF", "CoinCheck.WPF\CoinCheck.WPF.csproj", "{E3B0517E-7C9D-4440-8814-E289569C277C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinCheck.WPF", "CoinCheck.WPF\CoinCheck.WPF.csproj", "{E3B0517E-7C9D-4440-8814-E289569C277C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinCheck.Service", "CoinCheck.Service\CoinCheck.Service.csproj", "{E50C1E64-99E2-432F-886C-93D542E702E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +21,17 @@ Global
 		{E3B0517E-7C9D-4440-8814-E289569C277C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3B0517E-7C9D-4440-8814-E289569C277C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3B0517E-7C9D-4440-8814-E289569C277C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E50C1E64-99E2-432F-886C-93D542E702E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E50C1E64-99E2-432F-886C-93D542E702E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E50C1E64-99E2-432F-886C-93D542E702E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E50C1E64-99E2-432F-886C-93D542E702E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E3B0517E-7C9D-4440-8814-E289569C277C} = {67C60B0A-6103-4BBB-BE6F-3AF7FF50752F}
+		{E50C1E64-99E2-432F-886C-93D542E702E0} = {67C60B0A-6103-4BBB-BE6F-3AF7FF50752F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E702A137-85EC-4B64-B6C9-B4188610A0E5}
