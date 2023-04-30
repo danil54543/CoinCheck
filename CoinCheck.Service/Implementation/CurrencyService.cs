@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CoinCheck.Service.Interface;
 
 namespace CoinCheck.Service.Implementation
 {
-    internal class CurrencyService
+    internal class CurrencyService : ICurrencyService
     {
+
     }
 }
