@@ -1,12 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CoinCheck.Domain.Model.Coin
 {
-    internal class Coins
+    public class Coins
     {
+        [JsonProperty("item")]
+        public Coin? Coin { get; set; }
     }
 }

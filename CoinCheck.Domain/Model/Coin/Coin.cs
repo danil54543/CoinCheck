@@ -1,8 +1,7 @@
-﻿using CoinCheck.Domain.Model.Coin;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace CoinCheck.Domain
+namespace CoinCheck.Domain.Model.Coin
 {
     public class Coin
     {

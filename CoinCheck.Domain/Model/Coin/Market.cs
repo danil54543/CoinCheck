@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.Json.Serialization;
 
 namespace CoinCheck.Domain.Model.Coin
 {
-    internal class Market
+    public class Market
     {
+        [JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+
+        [JsonPropertyName("identifier")]
+        public string? Identifier { get; set; }
     }
 }
