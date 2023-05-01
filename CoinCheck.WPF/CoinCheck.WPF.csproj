@@ -8,14 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ViewModel\**" />
-    <EmbeddedResource Remove="ViewModel\**" />
-    <None Remove="ViewModel\**" />
-    <Page Remove="ViewModel\**" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CoinCheck.Service\CoinCheck.Service.csproj" />
+    <ProjectReference Include="..\CoinCheck.Domain\CoinCheck.Domain.csproj" />
   </ItemGroup>
 
 </Project>

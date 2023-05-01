@@ -1,5 +1,4 @@
-﻿using CoinCheck.Service.Implementation;
-using CoinCheck.WPF.View;
+﻿using CoinCheck.WPF.View;
 using System.Windows;
 
 namespace CoinCheck.WPF
@@ -13,7 +12,7 @@ namespace CoinCheck.WPF
         {
             InitializeComponent();
             TopCoin topCoin = new();
-            CoinInfo coinInfo = new ();
+            CoinInfo coinInfo = new();
             TopCoin.NavigationService.Navigate(topCoin);
             CoinDetail.NavigationService.Navigate(coinInfo);
         }

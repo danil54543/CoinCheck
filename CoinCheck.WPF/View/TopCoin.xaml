@@ -9,12 +9,17 @@
 
     <Grid Background="White" Height="NaN" Width="NaN">
         <Label Content="Top 7 coin" HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="18" FontFamily="Segoe UI Black" VerticalAlignment="Top"/>
-        <DataGrid x:Name="topCoinsList" Margin="0,49,0,0" SelectionChanged="SelectionClick" FontSize="14" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HeadersVisibility="Column" Background="{x:Null}" BorderBrush="{x:Null}" VerticalGridLinesBrush="White" HorizontalGridLinesBrush="Black" Width="NaN">
-            <DataGrid.Columns>
-                <DataGridTextColumn Width="50" Binding="{Binding Symbol}"></DataGridTextColumn>
-                <DataGridTextColumn  Width="150" Binding="{Binding Name}"></DataGridTextColumn>
-                <DataGridTextColumn  Width="70" Binding="{Binding ChangePercent24Hr}"></DataGridTextColumn>
-            </DataGrid.Columns>
-        </DataGrid>
+        <ListBox Grid.Column="0" ItemsSource="{Binding Coins}"
+                 SelectedItem="{Binding SelectedCoin}" Margin="0,49,0,0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5">
+                        <TextBlock FontSize="18" Text="{Binding Path=Symbol}" />
+                        <TextBlock Text="{Binding Path=Name}" />
+                        <!--<TextBlock Text="{Binding Path=Price}" />-->
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Page>
