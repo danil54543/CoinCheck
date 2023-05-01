@@ -3,13 +3,12 @@ using System.Windows.Controls;
 
 namespace CoinCheck.WPF.View
 {
-    public partial class CoinInfo : Page
+    public partial class CoinList : Page
     {
-        public CoinInfo()
+        public CoinList()
         {
             InitializeComponent();
-            DataContext = new CoinInfoViewModel();
-
+            DataContext = new CoinListViewModel();
         }
     }
 }

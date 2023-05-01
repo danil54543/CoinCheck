@@ -1,14 +1,16 @@
-﻿<Page x:Class="CoinCheck.WPF.View.TopCoin"
+﻿<Page x:Class="CoinCheck.WPF.View.CoinList"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:CoinCheck.WPF.View"
-      mc:Ignorable="d"
-      Title="TopCoin" Height="300" Width="270">
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="400"
+      Title="CoinList">
 
-    <Grid Background="White" Height="NaN" Width="NaN">
-        <Label Content="Top 7 coin" HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="18" FontFamily="Segoe UI Black" VerticalAlignment="Top"/>
+    <Grid Background="White">
+        <Label Content="All coin" HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="18" FontFamily="Segoe UI Black" VerticalAlignment="Top"/>
+
         <ListBox Grid.Column="0" ItemsSource="{Binding Coins}"
                  SelectedItem="{Binding SelectedCoin}" Margin="0,49,0,0">
             <ListBox.ItemTemplate>

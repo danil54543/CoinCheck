@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:CoinCheck.WPF.View"
       mc:Ignorable="d"
-      Title="CoinInfo" Height="400" Width="318">
+      Title="CoinInfo" Height="600" Width="270">
 
     <Grid Background="White">
         <Label Content="Coin detail" HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="18" FontFamily="Segoe UI Black" VerticalAlignment="Top"/>

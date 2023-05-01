@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoinCheck.Domain.Model.Coin
+namespace CoinCheck.Domain.Model.CoinGeckoModel.Coin
 {
-    public class RootCoin
+    public class RootCoinCoinGecko
     {
         [JsonProperty("coins")]
-        public List<Coins>? Coins { get; set; }
+        public List<CoinsCoinGecko>? Coins { get; set; }
     }
 }
