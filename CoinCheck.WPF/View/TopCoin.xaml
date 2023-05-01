@@ -1,0 +1,20 @@
+﻿<Page x:Class="CoinCheck.WPF.View.TopCoin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CoinCheck.WPF.View"
+      mc:Ignorable="d"
+      Title="TopCoin" Height="268" Width="270">
+
+    <Grid Background="White" Height="NaN" Width="NaN">
+        <Label Content="Top 7 coin" HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="18" FontFamily="Segoe UI Black" VerticalAlignment="Top"/>
+        <DataGrid x:Name="topCoinsList" Margin="0,49,0,0" SelectionChanged="SelectionClick" FontSize="14" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HeadersVisibility="Column" Background="{x:Null}" BorderBrush="{x:Null}" VerticalGridLinesBrush="White" HorizontalGridLinesBrush="Black" Width="NaN">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="50" Binding="{Binding Symbol}"></DataGridTextColumn>
+                <DataGridTextColumn  Width="150" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn  Width="70" Binding="{Binding ChangePercent24Hr}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

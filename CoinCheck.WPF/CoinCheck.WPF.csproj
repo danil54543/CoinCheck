@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-	<Folder Include="View\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CoinCheck.Service\CoinCheck.Service.csproj" />
   </ItemGroup>
 
