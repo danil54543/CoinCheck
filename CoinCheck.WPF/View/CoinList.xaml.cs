@@ -17,7 +17,9 @@ namespace CoinCheck.WPF.View
 
         private void SearchButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            
+            CoinListViewModel coinListViewModel = new();
+            coinListViewModel.Search(SearchTextBox.Text);
+            DataContext = coinListViewModel;
         }
 
         private void UpdateButton_Click(object sender, System.Windows.RoutedEventArgs e)

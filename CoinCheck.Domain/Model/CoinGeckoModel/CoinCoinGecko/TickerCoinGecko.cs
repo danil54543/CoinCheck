@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoinCheck.Domain.Model.CoinGeckoModel.Coin
+namespace CoinCheck.Domain.Model.CoinGeckoModel.CoinCoinGecko
 {
     public class TickerCoinGecko
     {

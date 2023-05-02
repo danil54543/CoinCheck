@@ -1,4 +1,4 @@
-﻿using CoinCheck.Domain.Model.CoinGeckoModel.Coin;
+﻿using CoinCheck.Domain.Model.CoinGeckoModel.CoinCoinGecko;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

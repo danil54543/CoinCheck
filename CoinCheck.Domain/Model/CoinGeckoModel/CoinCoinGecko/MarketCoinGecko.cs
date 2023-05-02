@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace CoinCheck.Domain.Model.CoinGeckoModel.Coin
+namespace CoinCheck.Domain.Model.CoinGeckoModel.CoinCoinGecko
 {
     public class MarketCoinGecko
     {

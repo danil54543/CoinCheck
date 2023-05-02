@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace CoinCheck.Domain.Model.CoinGeckoModel.Coin
+namespace CoinCheck.Domain.Model.CoinGeckoModel.CoinCoinGecko
 {
     public class CoinCoinGecko
     {

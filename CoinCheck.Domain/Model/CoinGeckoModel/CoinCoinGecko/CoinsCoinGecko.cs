@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace CoinCheck.Domain.Model.CoinGeckoModel.Coin
+namespace CoinCheck.Domain.Model.CoinGeckoModel.CoinCoinGecko
 {
     public class CoinsCoinGecko
     {

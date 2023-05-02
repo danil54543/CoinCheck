@@ -18,9 +18,7 @@
                 <DataTemplate>
                     <StackPanel Margin="5">
                         <TextBlock FontSize="18" Text="{Binding Path=Symbol}" />
-                        <TextBlock FontSize="18" Text="{Binding Path=ChangePercent24Hr}" />
                         <TextBlock Text="{Binding Path=Name}" />
-                        <TextBlock Text="{Binding Path=PriceUsd}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
