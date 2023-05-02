@@ -5,23 +5,39 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:CoinCheck.WPF.View"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="400"
-      Title="CoinList">
+      d:DesignHeight="450"
+      Title="CoinList" Width="317">
 
     <Grid Background="White">
+
         <Label Content="All coin" HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="18" FontFamily="Segoe UI Black" VerticalAlignment="Top"/>
 
         <ListBox Grid.Column="0" ItemsSource="{Binding Coins}"
-                 SelectedItem="{Binding SelectedCoin}" Margin="0,49,0,0">
+                 SelectedItem="{Binding SelectedCoin}" Margin="0,49,0,0" BorderBrush="Black">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="5">
                         <TextBlock FontSize="18" Text="{Binding Path=Symbol}" />
+                        <TextBlock FontSize="18" Text="{Binding Path=ChangePercent24Hr}" />
                         <TextBlock Text="{Binding Path=Name}" />
-                        <!--<TextBlock Text="{Binding Path=Price}" />-->
+                        <TextBlock Text="{Binding Path=PriceUsd}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Margin="134,13,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="153" BorderBrush="#FF010101" Foreground="Black" Height="27" UndoLimit="20" SelectionBrush="#FF7FADD1" Cursor="IBeam" FontSize="16"/>
+        <Button x:Name="SearchButton" HorizontalAlignment="Left" Margin="287,13,0,0" VerticalAlignment="Top" Foreground="White" Focusable="False" Height="27" Width="30" BorderBrush="White" ClickMode="Press" Cursor="Hand" Click="SearchButton_Click">
+            <Button.FocusVisualStyle>
+                <Style/>
+            </Button.FocusVisualStyle>
+            <Button.Background>
+                <ImageBrush TileMode="None" Stretch="UniformToFill" ImageSource="/img/search.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="UpdateButton" HorizontalAlignment="Left" Margin="87,13,0,0" VerticalAlignment="Top" Height="28" Width="28" Foreground="White" BorderBrush="White" Cursor="Hand" Click="UpdateButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/img/update.jpg" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

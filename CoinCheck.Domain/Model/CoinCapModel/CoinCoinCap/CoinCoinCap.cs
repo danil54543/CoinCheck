@@ -1,14 +1,11 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CoinCheck.Domain.Model.CoinCapModel.CoinCoinCap
 {
     public class CoinCoinCap
     {
+
         [JsonProperty("id")]
         public string? Id { get; set; }
 
@@ -26,10 +23,14 @@ namespace CoinCheck.Domain.Model.CoinCapModel.CoinCoinCap
 
 
         [JsonProperty("priceUsd")]
-        public decimal PriceUsd { get; set; }
+        public string PriceUsd { get; set; }
+
 
 
         [JsonProperty("changePercent24Hr")]
-        public decimal ChangePercent24Hr { get; set; }
+        public string ChangePercent24Hr { get; set; }
+    
+        
+
     }
 }

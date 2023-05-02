@@ -6,9 +6,10 @@
         xmlns:local="clr-namespace:CoinCheck.WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="514" Width="863">
+    
     <Grid>
         <Frame x:Name="TopCoin" NavigationUIVisibility="Hidden" Margin="0,0,545,217" RenderTransformOrigin="0.411,0.303" HorizontalAlignment="Left" VerticalAlignment="Top" />
-        <Frame x:Name="CoinList" NavigationUIVisibility="Hidden" Margin="270,0,356,0" VerticalContentAlignment="Stretch" />
+        <Frame x:Name="CoinList" NavigationUIVisibility="Hidden" Margin="270,0,0,0" VerticalContentAlignment="Stretch" HorizontalAlignment="Left" Width="329" />
         <Frame x:Name="CoinDetail" NavigationUIVisibility="Hidden" Margin="0,249,545,-32" RenderTransformOrigin="0.411,0.303" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
     </Grid>
 </Window>

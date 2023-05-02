@@ -10,6 +10,6 @@ namespace CoinCheck.Domain.Model.CoinCapModel.CoinCoinCap
     public class CoinsCoinCap
     {
         [JsonProperty("data")]
-        public List<CoinCoinCap> Coins { get; set; }
+        public List<CoinCoinCap>? Coins { get; set; }
     }
 }

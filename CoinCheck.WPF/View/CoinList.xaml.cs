@@ -8,7 +8,23 @@ namespace CoinCheck.WPF.View
         public CoinList()
         {
             InitializeComponent();
-            DataContext = new CoinListViewModel();
+            var coinListViewModel = new CoinListViewModel();
+            coinListViewModel.GetAllCoin();
+            DataContext = coinListViewModel;
+        }
+
+        
+
+        private void SearchButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            
+        }
+
+        private void UpdateButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            CoinListViewModel coinListViewModel = new();
+            coinListViewModel.GetAllCoin();
+            DataContext = coinListViewModel;
         }
     }
 }

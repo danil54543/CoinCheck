@@ -11,12 +11,9 @@ namespace CoinCheck.WPF.ViewModel
     {
         private CoinCoinGecko? selectedCoin;
 
-        public CoinListViewModel()
-        {
-            Coins = GetAllCoin();
-        }
+        
 
-        public CoinCoinGecko? SelectedCoin  
+        public CoinCoinGecko? SelectedCoin
         {
             get { return selectedCoin; }
             set
@@ -25,26 +22,23 @@ namespace CoinCheck.WPF.ViewModel
                 OnPropertyChanged("SelectedCoin");
             }
         }
-        public List<CoinCoinCap> Coins { get; set; }
+        public List<CoinCoinCap> Coins { get; set; } = new();
 
-        public List<CoinCoinCap> GetAllCoin()
+        public void GetAllCoin()
         {
             try
             {
                 var request = CoinCapClient().GetAsync($"assets").Result;
                 var responseBody = request.EnsureSuccessStatusCode().Content.ReadAsStringAsync().Result;
                 var coinList = JsonConvert.DeserializeObject<CoinsCoinCap>(responseBody);
-                List<CoinCoinCap> result = new();
                 foreach (var coin in coinList.Coins)
                 {
-                    result.Add(coin);
+                   Coins.Add(coin);
                 }
-                return result ?? throw new HttpRequestException("CoinCap api response equals null.");
             }
             catch (HttpRequestException ex)
             {
                 Console.WriteLine(ex.Message);
-                return new();
             }
         }
     }

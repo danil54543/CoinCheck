@@ -8,11 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="img\search.png" />
+    <None Remove="img\update.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CoinCheck.Domain\CoinCheck.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\search.png" />
+    <Resource Include="img\update.jpg" />
   </ItemGroup>
 
 </Project>
