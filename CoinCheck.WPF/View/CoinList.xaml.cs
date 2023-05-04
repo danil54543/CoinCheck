@@ -5,28 +5,28 @@ namespace CoinCheck.WPF.View
 {
     public partial class CoinList : Page
     {
+        private CoinListViewModel viewModel;
         public CoinList()
         {
             InitializeComponent();
-            var coinListViewModel = new CoinListViewModel();
-            coinListViewModel.GetAllCoin();
-            DataContext = coinListViewModel;
+            viewModel = new();
+            viewModel.GetAllCoin();
+            DataContext = viewModel;
         }
-
         
-
         private void SearchButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            CoinListViewModel coinListViewModel = new();
-            coinListViewModel.Search(SearchTextBox.Text);
-            DataContext = coinListViewModel;
+            viewModel.Search(SearchTextBox.Text);
+            DataContext = viewModel;
         }
 
         private void UpdateButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            CoinListViewModel coinListViewModel = new();
-            coinListViewModel.GetAllCoin();
-            DataContext = coinListViewModel;
+            viewModel.GetAllCoin();
+            DataContext = viewModel;
+        }
+        private void SelectionClick(object sender, SelectionChangedEventArgs e)
+        {
         }
     }
 }

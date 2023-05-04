@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace CoinCheck.Domain.Model.CoinGeckoModel.Exchange
+namespace CoinCheck.Domain.Model
 {
-    public class ExchangeCoinGecko
+    public class Exchange
     {
         [JsonProperty("id")]
         public string? Id { get; set; }

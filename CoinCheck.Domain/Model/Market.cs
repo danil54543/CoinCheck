@@ -5,9 +5,9 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace CoinCheck.Domain.Model.CoinGeckoModel.CoinCoinGecko
+namespace CoinCheck.Domain.Model
 {
-    public class MarketCoinGecko
+    public class Market
     {
         [JsonPropertyName("name")]
         public string? Name { get; set; }

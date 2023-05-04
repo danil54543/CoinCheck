@@ -6,14 +6,14 @@
       xmlns:local="clr-namespace:CoinCheck.WPF.View"
       mc:Ignorable="d" 
       d:DesignHeight="450"
-      Title="CoinList" Width="317">
+      Title="CoinList" Width="220">
 
     <Grid Background="White">
 
         <Label Content="All coin" HorizontalAlignment="Left" Margin="10,10,0,0" FontSize="18" FontFamily="Segoe UI Black" VerticalAlignment="Top"/>
 
         <ListBox Grid.Column="0" ItemsSource="{Binding Coins}"
-                 SelectedItem="{Binding SelectedCoin}" Margin="0,49,0,0" BorderBrush="Black">
+                 SelectedItem="{Binding SelectedCoin}" Margin="0,82,0,0" BorderBrush="Black">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="5">
@@ -23,8 +23,8 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Margin="134,13,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="153" BorderBrush="#FF010101" Foreground="Black" Height="27" UndoLimit="20" SelectionBrush="#FF7FADD1" Cursor="IBeam" FontSize="16"/>
-        <Button x:Name="SearchButton" HorizontalAlignment="Left" Margin="287,13,0,0" VerticalAlignment="Top" Foreground="White" Focusable="False" Height="27" Width="30" BorderBrush="White" ClickMode="Press" Cursor="Hand" Click="SearchButton_Click">
+        <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Margin="16,41,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="154" BorderBrush="#FF010101" Foreground="Black" Height="27" UndoLimit="20" SelectionBrush="#FF7FADD1" Cursor="IBeam" FontSize="16"/>
+        <Button x:Name="SearchButton" HorizontalAlignment="Left" Margin="170,41,0,0" VerticalAlignment="Top" Foreground="White" Focusable="False" Height="27" Width="30" BorderBrush="White" ClickMode="Press" Cursor="Hand" Click="SearchButton_Click">
             <Button.FocusVisualStyle>
                 <Style/>
             </Button.FocusVisualStyle>

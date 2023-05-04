@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace CoinCheck.Domain.Model.CoinGeckoModel.CoinCoinGecko
+namespace CoinCheck.Domain.Model
 {
-    public class CoinCoinGecko
+    public class Coin
     {
         [JsonProperty("id")]
         public string? Id { get; set; }
@@ -18,6 +18,9 @@ namespace CoinCheck.Domain.Model.CoinGeckoModel.CoinCoinGecko
 
 
         [JsonProperty("tickers")]
-        public List<TickerCoinGecko>? Tickers { get; set; }
+        public List<Ticker>? Tickers { get; set; }
+
+        [JsonProperty("market_data")]
+        public MarketData? MarketData { get; set; }
     }
 }

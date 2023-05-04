@@ -17,13 +17,22 @@ namespace CoinCheck.WPF.ViewModel
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         }
-        public HttpClient CoinGeckoClient()
+       
+        public string GetResponse(string address)
         {
-            return new() { BaseAddress = new Uri(CoinGeckoApi) };
+            try
+            {
+                var client = new HttpClient() { BaseAddress = new Uri(CoinGeckoApi) };
+                var request = client.GetAsync(address).Result;
+                return request.EnsureSuccessStatusCode().Content.ReadAsStringAsync().Result;
+            }
+            catch (HttpRequestException ex)
+            {              
+                Console.WriteLine(ex.Message);
+                return "";
+            }
+
         }
-        public HttpClient CoinCapClient()
-        {
-            return new() { BaseAddress = new Uri(CoinCapApi) };
-        }
+
     }
 }

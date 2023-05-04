@@ -5,10 +5,10 @@ namespace CoinCheck.WPF.View
 {
     public partial class CoinInfo : Page
     {
-        public CoinInfo()
+        public CoinInfo(string id)
         {
             InitializeComponent();
-            DataContext = new CoinInfoViewModel();
+            DataContext = new CoinInfoViewModel(id);
 
         }
     }

@@ -1,5 +1,4 @@
-﻿using CoinCheck.Domain.Model.CoinCapModel.CoinCoinCap;
-using CoinCheck.Domain.Model.CoinGeckoModel.CoinCoinGecko;
+﻿using CoinCheck.Domain.Model;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -9,11 +8,9 @@ namespace CoinCheck.WPF.ViewModel
 {
     internal class CoinListViewModel : BaseViewModel
     {
-        private CoinCoinGecko? selectedCoin;
+        private Coin selectedCoin;
 
-
-
-        public CoinCoinGecko? SelectedCoin
+        public Coin SelectedCoin
         {
             get { return selectedCoin; }
             set
@@ -22,16 +19,14 @@ namespace CoinCheck.WPF.ViewModel
                 OnPropertyChanged("SelectedCoin");
             }
         }
-        public List<CoinCoinCap> Coins { get; set; } = new();
+        public List<Coin> Coins { get; set; } = new();
 
         public void GetAllCoin()
         {
             try
             {
                 Coins.Clear();
-                var request = CoinCapClient().GetAsync("assets").Result;
-                var responseBody = request.EnsureSuccessStatusCode().Content.ReadAsStringAsync().Result;
-                var coinList = JsonConvert.DeserializeObject<CoinsCoinCap>(responseBody);
+                var coinList = JsonConvert.DeserializeObject<RootCoinSearch>(GetResponse("search?query=%20"));
                 foreach (var coin in coinList.Coins)
                 {
                     Coins.Add(coin);
@@ -47,13 +42,11 @@ namespace CoinCheck.WPF.ViewModel
             try
             {
                 Coins.Clear();
-                var request = CoinGeckoClient().GetAsync("search?query=" + query).Result;
-                var responseBody = request.EnsureSuccessStatusCode().Content.ReadAsStringAsync().Result;
-                var rootCoin = JsonConvert.DeserializeObject<RootCoinCoinGeckoSearch>(responseBody);
-                var coinList = new List<CoinCoinGecko>();
+                var rootCoin = JsonConvert.DeserializeObject<RootCoinSearch>(GetResponse("search?query=" + query));
+                var coinList = new List<Coin>();
                 foreach (var coin in rootCoin.Coins)
                 {
-                    
+
                     Coins.Add(new()
                     {
                         Id = coin.Id,

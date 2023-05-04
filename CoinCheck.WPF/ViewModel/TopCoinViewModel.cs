@@ -1,4 +1,4 @@
-﻿using CoinCheck.Domain.Model.CoinGeckoModel.CoinCoinGecko;
+﻿using CoinCheck.Domain.Model;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -10,12 +10,12 @@ namespace CoinCheck.WPF.ViewModel
     {
         public TopCoinViewModel()
         {
-            Coins = GetTopCoin();
+            GetTopCoin();
         }
 
-        private CoinCoinGecko? selectedCoin;
+        private Coin? selectedCoin;
 
-        public CoinCoinGecko? SelectedCoin
+        public Coin? SelectedCoin
         {
             get { return selectedCoin; }
             set
@@ -25,26 +25,22 @@ namespace CoinCheck.WPF.ViewModel
             }
         }
 
-        public List<CoinCoinGecko> Coins { get; set; }
+        public List<Coin> Coins { get; set; }
 
-        public List<CoinCoinGecko> GetTopCoin()
+        public void GetTopCoin()
         {
             try
             {
-                var request = CoinGeckoClient().GetAsync($"search/trending").Result;
-                var responseBody = request.EnsureSuccessStatusCode().Content.ReadAsStringAsync().Result;
-                var rootCoin = JsonConvert.DeserializeObject<RootCoinCoinGecko>(responseBody);
-                var coinList = new List<CoinCoinGecko>();
+                Coins = new();
+                var rootCoin = JsonConvert.DeserializeObject<RootCoin>(GetResponse("search/trending"));
                 foreach (var coin in rootCoin.Coins)
                 {
-                    coinList.Add(coin.Coin);
+                    Coins.Add(coin.Coin);
                 }
-                return coinList ?? throw new HttpRequestException("Response equals null.");
             }
             catch (HttpRequestException ex)
             {
                 Console.WriteLine(ex.Message);
-                return new();
             }
         }
 
