@@ -1,7 +1,9 @@
 ﻿using CoinCheck.Domain.Model;
+using CoinCheck.WPF.View;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Net.Http;
 
 namespace CoinCheck.WPF.ViewModel
@@ -15,7 +17,10 @@ namespace CoinCheck.WPF.ViewModel
             get { return selectedCoin; }
             set
             {
-                selectedCoin = value;
+                if(value.Id!= null)
+                {
+                    GetData(value.Id);
+                }
                 OnPropertyChanged("SelectedCoin");
             }
         }
@@ -58,6 +63,19 @@ namespace CoinCheck.WPF.ViewModel
             catch (HttpRequestException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+        }
+        private void GetData(string id)
+        {
+            try
+            {
+               selectedCoin = JsonConvert.DeserializeObject<Coin>(GetResponse("coins/" + id));
+                Detail detail = new(selectedCoin);
+                detail.Show();
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine(ex);
             }
         }
     }

@@ -8,10 +8,7 @@ namespace CoinCheck.WPF.ViewModel
 {
     internal class TopCoinViewModel : BaseViewModel
     {
-        public TopCoinViewModel()
-        {
-            GetTopCoin();
-        }
+       
 
         private Coin? selectedCoin;
 

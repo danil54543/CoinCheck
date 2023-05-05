@@ -6,7 +6,7 @@ namespace CoinCheck.Domain.Model
     public class Ticker
     {
         [JsonProperty("market")]
-        public List<Market>? Markets { get; set; }
+        public Market? Markets { get; set; }
 
 
         [JsonProperty("trade_url")]

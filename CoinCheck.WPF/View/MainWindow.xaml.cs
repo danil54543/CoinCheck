@@ -10,7 +10,6 @@ namespace CoinCheck.WPF
             InitializeComponent();
             TopCoin topCoin = new();
             CoinList coinList = new ();
-            CoinInfo coinInfo = new();
             TopCoin.NavigationService.Navigate(topCoin);
             CoinList.NavigationService.Navigate(coinList);
         }
